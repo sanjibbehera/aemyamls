@@ -251,7 +251,7 @@ Resources:
     Properties:
       Description: Copies objects from a source S3 bucket to a destination
       Handler: index.handler
-      Runtime: python3.9
+      Runtime: python3.7
       Role:
         Fn::GetAtt: CopyZipsRoleArn.Arn
       Timeout: 900
@@ -295,7 +295,7 @@ Resources:
     Properties:
       Description: Sync libraries for AEM OpenCloud to the AEM OpenCloud Stack S3 data location
       Handler: index.lambda_handler
-      Runtime: python3.9
+      Runtime: python3.7
       MemorySize: 512
       Timeout: 900
       Role: !GetAtt 'LambdaFunctionExecuteRole.Arn'
@@ -368,7 +368,7 @@ Resources:
     Properties:
       Description: Sync Artifacts for AEM OpenCloud to the AEM OpenCloud Stack S3 data location
       Handler: index.lambda_handler
-      Runtime: python3.9
+      Runtime: python3.7
       Timeout: 300
       Role: !GetAtt 'LambdaFunctionExecuteRole.Arn'
       Code:
@@ -406,7 +406,7 @@ Resources:
     Properties:
       Description: Generate AEM System Users Credentials and Sync to the AEM OpenCloud Stack S3 data location
       Handler: index.lambda_handler
-      Runtime: python3.9
+      Runtime: python3.7
       Timeout: 300
       Role: !GetAtt 'LambdaFunctionExecuteRole.Arn'
       Code:
@@ -449,7 +449,7 @@ Resources:
       Handler: lambda_function.handler
       MemorySize: 128
       Role: !GetAtt 'LambdaFunctionExecuteRole.Arn'
-      Runtime: python3.9
+      Runtime: python3.7
       Timeout: 900
       Code:
         S3Bucket: !Ref LambdaZipsBucketName
@@ -461,7 +461,7 @@ Resources:
     Properties:
       Description: Edit AEM OpenCloud Stack config and Sync to the AEM OpenCloud Stack S3 data location
       Handler: lambda_function.handler
-      Runtime: python3.9
+      Runtime: python3.7
       Timeout: 300
       Role: !GetAtt 'LambdaFunctionExecuteRole.Arn'
       Code:
@@ -474,7 +474,7 @@ Resources:
     Properties:
       Description: Edit AEM OpenCloud Packer configiratopm and Sync to the AEM OpenCloud Stack S3 data location
       Handler: lambda_function.handler
-      Runtime: python3.9
+      Runtime: python3.7
       Timeout: 300
       Role: !GetAtt 'LambdaFunctionExecuteRole.Arn'
       Code:
@@ -487,7 +487,7 @@ Resources:
     Properties:
       Description: Edit AEM OpenCloud Stack fact asset and Sync to the AEM OpenCloud Stack S3 data location
       Handler: lambda_function.handler
-      Runtime: python3.9
+      Runtime: python3.7
       Timeout: 300
       Role: !GetAtt 'LambdaFunctionExecuteRole.Arn'
       Code:
@@ -498,7 +498,7 @@ Resources:
     Properties:
       Description: Cleanup Synced libraries for AEM OpenCloud from the AEM OpenCloud Stack S3 data location
       Handler: index.lambda_handler
-      Runtime: python3.9
+      Runtime: python3.7
       Timeout: 300
       Role: !GetAtt 'LambdaFunctionExecuteRole.Arn'
       Code:
